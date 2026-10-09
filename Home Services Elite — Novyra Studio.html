@@ -1,0 +1,1098 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Exemplo Serviços Residenciais | Serviços para sua casa</title>
+<meta name="description" content="Serviços residenciais com comunicação clara e acabamento cuidadoso. Solicite um orçamento online.">
+<meta name="theme-color" content="#171C1B">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Exemplo Serviços Residenciais | Serviços para sua casa">
+<meta property="og:description" content="Serviços residenciais com comunicação clara e acabamento cuidadoso.">
+<meta name="twitter:card" content="summary_large_image">
+
+<style>
+/* HOME SERVICES ELITE — Novyra Studio. Colors are CSS variables set from config.theme. */
+:root{
+  --charcoal:#171C1B;--forest:#355847;--ivory:#F4F1E9;--sage:#B7C5B8;--white:#fff;--muted:#5B645E;--border:#D9DED8;
+  --font-head:"Newsreader",Georgia,serif;--font-body:"Hanken Grotesk",system-ui,sans-serif;
+  --pad:clamp(20px,5vw,72px);--max:1320px;--header-h:72px;--banner-h:0px;
+  --ease:cubic-bezier(.2,.6,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + 12px)}
+body{margin:0;font-family:var(--font-body);font-size:1.0625rem;line-height:1.6;color:var(--charcoal);background:var(--ivory);overflow-x:hidden}
+body.is-locked{overflow:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3,h4{font-family:var(--font-head);font-weight:400;line-height:1.08;margin:0;letter-spacing:-.01em}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--forest);outline-offset:3px;border-radius:2px}
+.on-dark :focus-visible,.dark :focus-visible{outline-color:var(--sage)}
+.skip-link{position:absolute;left:12px;top:-60px;z-index:200;background:var(--charcoal);color:#fff;padding:10px 16px;text-decoration:none}
+.skip-link:focus{top:12px}
+.container{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:var(--pad)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* Sections & rhythm */
+.section{padding-block:clamp(72px,11vw,150px)}
+.dark{background:var(--charcoal);color:var(--ivory)}
+.forest{background:var(--forest);color:var(--ivory)}
+.paper{background:var(--white)}
+.muted{color:var(--muted)}
+.dark .muted,.forest .muted{color:var(--sage)}
+.h2{font-size:clamp(2.1rem,5vw,3.9rem)}
+.h3{font-size:clamp(1.45rem,2.4vw,2rem)}
+.eyebrow{font-size:.9rem;font-weight:500;color:var(--forest);letter-spacing:.02em;margin-bottom:1.1rem}
+.dark .eyebrow,.forest .eyebrow{color:var(--sage)}
+.sample-note{display:inline-block;font-size:.8rem;border:1px solid currentColor;padding:2px 10px;border-radius:99px;opacity:.85}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:48px;padding:.8rem 1.6rem;border:1px solid transparent;font-weight:500;font-size:1rem;text-decoration:none;cursor:pointer;border-radius:2px;transition:background .25s var(--ease),color .25s var(--ease),border-color .25s var(--ease),transform .25s var(--ease)}
+.btn-primary{background:var(--forest);color:#fff}
+.btn-primary:hover{background:#2a4639}
+.dark .btn-primary,.forest .btn-primary{background:var(--ivory);color:var(--charcoal)}
+.dark .btn-primary:hover,.forest .btn-primary:hover{background:var(--sage)}
+.btn-ghost{border-color:currentColor;background:transparent}
+.btn-ghost:hover{background:var(--charcoal);color:var(--ivory);border-color:var(--charcoal)}
+.dark .btn-ghost:hover,.forest .btn-ghost:hover{background:var(--ivory);color:var(--charcoal);border-color:var(--ivory)}
+.link{background:none;border:0;padding:0;font-weight:500;cursor:pointer;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px;min-height:44px;display:inline-flex;align-items:center}
+.link:hover{text-decoration-thickness:2px}
+
+/* Utility bar */
+.utility{background:var(--charcoal);color:var(--sage);font-size:.86rem}
+.utility .container{display:flex;flex-wrap:wrap;gap:.25rem 2rem;justify-content:space-between;padding-block:8px}
+.utility a{text-decoration:none}.utility a:hover{text-decoration:underline}
+.utility .u-list{display:flex;flex-wrap:wrap;gap:.25rem 2rem}
+@media(max-width:640px){.utility .u-hours{display:none}}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(244,241,233,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;height:var(--header-h);gap:1rem}
+.logo{display:inline-flex;align-items:center;gap:.7rem;text-decoration:none;font-family:var(--font-head);font-size:1.4rem;line-height:1.1;min-height:44px}
+.logo-mark{display:grid;place-items:center;width:36px;height:36px;background:var(--charcoal);color:var(--sage);font-size:1.1rem;flex:none}
+.logo img{max-height:40px;width:auto}
+.nav-list{display:flex;align-items:center;gap:clamp(1rem,2vw,2.2rem)}
+.nav-list a.nav-link{text-decoration:none;font-size:.97rem;padding:.5rem 0;position:relative;display:inline-block}
+.nav-link::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+.nav-link:hover::after{transform:scaleX(1)}
+.nav-cta{padding:.6rem 1.2rem;min-height:44px}
+.menu-btn{display:none;background:none;border:1px solid var(--charcoal);width:48px;height:48px;border-radius:2px;cursor:pointer;position:relative}
+.menu-btn span{position:absolute;left:13px;right:13px;height:1.5px;background:var(--charcoal);transition:transform .3s var(--ease),opacity .2s}
+.menu-btn span:nth-child(1){top:18px}.menu-btn span:nth-child(2){top:23px}.menu-btn span:nth-child(3){top:28px}
+.menu-btn[aria-expanded=true] span:nth-child(1){transform:translateY(5px) rotate(45deg)}
+.menu-btn[aria-expanded=true] span:nth-child(2){opacity:0}
+.menu-btn[aria-expanded=true] span:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
+@media(max-width:959px){
+  .menu-btn{display:block}
+  .site-nav{position:absolute;left:0;right:0;top:100%;background:var(--ivory);border-bottom:1px solid var(--border);padding:8px var(--pad) 28px;visibility:hidden;opacity:0;transform:translateY(-8px);transition:opacity .25s var(--ease),transform .25s var(--ease),visibility .25s;max-height:calc(100vh - var(--header-h));max-height:calc(100dvh - var(--header-h));overflow:auto}
+  .site-nav.open{visibility:visible;opacity:1;transform:none}
+  .nav-list{flex-direction:column;align-items:stretch;gap:0}
+  .nav-list a.nav-link{font-family:var(--font-head);font-size:1.8rem;padding:.8rem 0;border-bottom:1px solid var(--border);display:block}
+  .nav-link::after{display:none}
+  .nav-cta{margin-top:1.4rem;width:100%}
+}
+
+/* Hero */
+.hero{padding-block:clamp(32px,6vw,80px) clamp(56px,8vw,110px);overflow:hidden}
+.hero-grid{display:grid;gap:clamp(28px,5vw,64px);align-items:end}
+.hero h1{font-size:clamp(2.9rem,9vw,4.2rem);line-height:.98;letter-spacing:-.025em;text-wrap:balance}
+.hero-copy .lede{margin-top:1.6rem;font-size:clamp(1.05rem,1.6vw,1.25rem);color:var(--muted);max-width:34em}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2.2rem}
+.hero-media{position:relative;margin:0}
+.hero-media img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.hero-label{position:absolute;left:0;bottom:0;background:var(--ivory);padding:14px 22px 14px 0;font-size:.92rem;display:flex;flex-direction:column}
+.hero-label strong{font-family:var(--font-head);font-weight:400;font-size:1.25rem}
+@media(min-width:960px){
+  .hero-grid{grid-template-columns:repeat(12,1fr);align-items:stretch}
+  .hero h1{font-size:clamp(4rem,6vw,5.6rem)}
+  .hero-copy{grid-column:1/6;display:flex;flex-direction:column;justify-content:space-between;padding-block:1rem 0}
+  
+  .hero-media{grid-column:6/13;margin-right:calc(var(--pad) * -1)}
+  .hero-media img{aspect-ratio:auto;height:100%;min-height:600px;max-height:78vh}
+  .hero-note{margin-top:3rem}
+}
+.hero-note{font-size:.92rem;color:var(--muted);border-top:1px solid var(--border);padding-top:1rem;margin-top:2.4rem;max-width:22rem}
+
+/* Services */
+.split-head{display:grid;gap:1.2rem 4rem;margin-bottom:clamp(40px,6vw,80px)}
+@media(min-width:900px){.split-head{grid-template-columns:7fr 5fr;align-items:end}}
+.svc-features{display:grid;gap:clamp(40px,6vw,72px)}
+@media(min-width:900px){
+  .svc-features.two{grid-template-columns:7fr 5fr;align-items:start}
+  .svc-features.two .svc-feature:nth-child(2){margin-top:clamp(60px,9vw,140px)}
+}
+.svc-feature img{width:100%;object-fit:cover;aspect-ratio:4/3;transition:transform .8s var(--ease)}
+.svc-feature:nth-child(2) img{aspect-ratio:4/5}
+.svc-feature .frame{overflow:hidden;margin-bottom:1.4rem}
+.svc-feature:hover img{transform:scale(1.025)}
+.svc-feature p{color:var(--muted);max-width:30em;margin:.7rem 0 1rem}
+.svc-feature.no-img{border-top:1px solid var(--border);padding-top:1.4rem}
+.svc-rows{margin-top:clamp(56px,8vw,110px);border-top:1px solid var(--charcoal)}
+.svc-row{display:grid;gap:.4rem 2rem;padding:1.5rem 0;border-bottom:1px solid var(--border);align-items:center}
+.svc-row p{color:var(--muted)}
+@media(min-width:800px){.svc-row{grid-template-columns:4fr 6fr auto}}
+
+/* Statement */
+.statement{text-align:left}
+.statement h2{font-size:clamp(2.6rem,8vw,6.4rem);line-height:1;max-width:11em;letter-spacing:-.025em;text-wrap:balance}
+.statement p{margin-top:2rem;max-width:36em;color:var(--sage);font-size:1.15rem;margin-left:0}
+@media(min-width:900px){.statement p{margin-left:calc(50% + 2rem);margin-top:3rem}}
+
+/* Approach */
+.steps{display:grid;border-top:1px solid var(--charcoal);margin-top:clamp(40px,6vw,72px)}
+.step{padding:1.8rem 0 2.2rem;border-bottom:1px solid var(--border);display:grid;gap:.6rem}
+.step-n{font-family:var(--font-head);font-size:1.1rem;color:var(--forest)}
+.step p{color:var(--muted);max-width:28em}
+@media(min-width:900px){
+  .steps{grid-template-columns:repeat(var(--cols,3),1fr)}
+  .step{border-bottom:0;padding:2rem 2rem 0 0}
+  .step+.step{border-left:1px solid var(--border);padding-left:2rem}
+  .step:nth-child(even){padding-top:5rem}
+}
+.cta-band{border-top:1px solid var(--border)}
+.cta-band .container{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1.5rem;padding-block:clamp(36px,5vw,64px)}
+.cta-band h2{font-size:clamp(1.7rem,3.4vw,2.6rem)}
+
+/* Featured project */
+.feature-grid{display:grid;gap:clamp(28px,5vw,64px);align-items:end}
+@media(min-width:960px){.feature-grid{grid-template-columns:8fr 4fr}}
+.feature-grid img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.feature-meta{display:flex;flex-direction:column;gap:1.2rem;align-items:flex-start}
+.feature-meta .tag{font-size:.92rem;color:var(--sage)}
+
+/* Gallery */
+.gallery{columns:1;column-gap:clamp(12px,2vw,24px);margin-top:clamp(32px,5vw,56px)}
+@media(min-width:600px){.gallery{columns:2}}
+@media(min-width:1000px){.gallery{columns:3}}
+.g-item{break-inside:avoid;margin:0 0 clamp(12px,2vw,24px);position:relative}
+.g-item button{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;overflow:hidden}
+.g-item img{width:100%;height:auto;transition:transform .7s var(--ease)}
+.g-item button:hover img{transform:scale(1.03)}
+.g-item.static button{cursor:default}
+.g-item figcaption{font-size:.9rem;color:var(--muted);padding-top:.5rem}
+
+/* Why */
+.why-grid{display:grid;gap:0 4rem}
+@media(min-width:900px){.why-grid{grid-template-columns:4fr 8fr}.why-title{position:sticky;top:calc(var(--header-h) + 32px);align-self:start}}
+.why-list li{display:grid;grid-template-columns:auto 1fr;gap:.2rem 1.2rem;padding:1.4rem 0;border-bottom:1px solid var(--border)}
+.why-list li:first-child{border-top:1px solid var(--charcoal)}
+.why-list svg{width:22px;height:22px;margin-top:.35rem;color:var(--forest);grid-row:span 2}
+.why-list h3{font-size:1.5rem}
+.why-list p{color:var(--muted)}
+
+/* About */
+.about-grid{display:grid;gap:clamp(32px,5vw,72px);align-items:center}
+@media(min-width:960px){.about-grid{grid-template-columns:5fr 6fr}}
+.about-grid img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.about-copy p+p{margin-top:1rem}
+.about-copy .h2{margin-bottom:1.6rem}
+.philosophy{font-family:var(--font-head);font-size:clamp(1.4rem,2.4vw,1.9rem);line-height:1.25;border-left:2px solid var(--forest);padding-left:1.2rem;margin:2rem 0}
+.team-list{display:flex;flex-wrap:wrap;gap:1rem 2.5rem;margin:1.5rem 0}
+.team-list span{display:block;color:var(--muted);font-size:.92rem}
+
+/* Areas */
+.areas-grid{display:grid;gap:2.5rem 4rem}
+@media(min-width:900px){.areas-grid{grid-template-columns:6fr 6fr;align-items:end}}
+.main-city{font-family:var(--font-head);font-size:clamp(3rem,10vw,7rem);line-height:1;letter-spacing:-.02em;margin-top:.6rem}
+.area-list li{padding:.8rem 0;border-bottom:1px solid rgba(183,197,184,.3);font-family:var(--font-head);font-size:1.4rem}
+.area-list li:first-child{border-top:1px solid rgba(183,197,184,.3)}
+
+/* Testimonials */
+.quotes{display:grid;gap:3rem;margin-top:3rem}
+@media(min-width:900px){.quotes{grid-template-columns:repeat(var(--cols,2),1fr)}}
+blockquote{margin:0;font-family:var(--font-head);font-size:clamp(1.3rem,2.2vw,1.8rem);line-height:1.3}
+.quotes figcaption{margin-top:1rem;font-size:.92rem;color:var(--muted)}
+
+/* FAQ */
+.faq-grid{display:grid;gap:2rem 4rem}
+@media(min-width:900px){.faq-grid{grid-template-columns:4fr 8fr}}
+.acc-item{border-bottom:1px solid var(--border)}
+.acc-item:first-child{border-top:1px solid var(--charcoal)}
+.acc-btn{width:100%;display:flex;justify-content:space-between;align-items:center;gap:1rem;text-align:left;background:none;border:0;padding:1.3rem 0;cursor:pointer;font-family:var(--font-head);font-size:clamp(1.2rem,2vw,1.55rem);min-height:56px}
+.acc-btn .plus{flex:none;width:18px;height:18px;position:relative}
+.acc-btn .plus::before,.acc-btn .plus::after{content:"";position:absolute;background:currentColor;left:0;right:0;top:8px;height:1.5px;transition:transform .3s var(--ease)}
+.acc-btn .plus::after{transform:rotate(90deg)}
+.acc-btn[aria-expanded=true] .plus::after{transform:rotate(0)}
+.acc-panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s var(--ease)}
+.acc-panel>div{overflow:hidden}
+.acc-panel.open{grid-template-rows:1fr}
+.acc-panel p{padding:0 2rem 1.5rem 0;color:var(--muted);max-width:40em}
+
+/* Contact */
+.contact-grid{display:grid;gap:2.5rem 4rem}
+@media(min-width:900px){.contact-grid{grid-template-columns:5fr 7fr}}
+.contact-list{display:grid;gap:0}
+.contact-row{display:grid;gap:.2rem 2rem;padding:1.1rem 0;border-bottom:1px solid rgba(183,197,184,.3)}
+.contact-row:first-child{border-top:1px solid rgba(183,197,184,.3)}
+.contact-row dt{color:var(--sage);font-size:.9rem}
+.contact-row dd{margin:0;font-family:var(--font-head);font-size:1.4rem;overflow-wrap:anywhere}
+.contact-row dd small{display:block;font-family:var(--font-body);font-size:.95rem;color:var(--sage)}
+@media(min-width:640px){.contact-row{grid-template-columns:10rem 1fr}}
+.contact-row a{text-decoration-thickness:1px;text-underline-offset:4px}
+.contact-actions{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2rem}
+
+/* Footer */
+.site-footer{background:#0f1312;color:var(--sage);padding-block:clamp(48px,7vw,88px) 84px;font-size:.97rem}
+.footer-grid{display:grid;gap:2.5rem}
+@media(min-width:800px){.footer-grid{grid-template-columns:5fr 2fr 2fr 3fr}}
+.site-footer h2{font-family:var(--font-body);font-size:.95rem;font-weight:600;color:var(--ivory);margin-bottom:.8rem;letter-spacing:0}
+.site-footer li{margin:.15rem 0}
+.site-footer a,.site-footer .link{text-decoration:none;display:inline-flex;align-items:center;min-height:36px;color:inherit}
+.site-footer a:hover,.site-footer .link:hover{color:#fff;text-decoration:underline}
+.site-footer .link{font-weight:400;text-decoration:none}
+.site-footer .logo{color:var(--ivory)}
+.site-footer .btn{margin-top:1.4rem}
+.footer-bottom{margin-top:3rem;padding-top:1.4rem;border-top:1px solid rgba(183,197,184,.25);display:flex;flex-wrap:wrap;gap:.5rem 2rem;justify-content:space-between;font-size:.9rem}
+.footer-bottom ul{display:flex;flex-wrap:wrap;gap:0 1.5rem}
+
+/* Floating WhatsApp */
+.wa-float{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:calc(max(16px,env(safe-area-inset-bottom)) + var(--banner-h));z-index:40;display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:var(--forest);color:#fff;border:2px solid var(--ivory);box-shadow:0 6px 20px rgba(23,28,27,.28);cursor:pointer;text-decoration:none;transition:transform .25s var(--ease),bottom .25s var(--ease)}
+.wa-float:hover{transform:translateY(-2px)}
+.wa-float svg{width:28px;height:28px}
+@media(max-width:640px){.wa-float{width:52px;height:52px}}
+body{padding-bottom:0}
+
+/* Dialogs */
+dialog{border:0;padding:0;background:var(--ivory);color:var(--charcoal);max-width:none;max-height:none}
+dialog::backdrop{background:rgba(23,28,27,.66);backdrop-filter:blur(2px)}
+dialog[open]{animation:dlg .3s var(--ease)}
+dialog[open]::backdrop{animation:fade .3s var(--ease)}
+@keyframes dlg{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.dlg-panel{width:min(640px,100vw);height:100vh;height:100dvh;margin:0 0 0 auto;display:flex;flex-direction:column;overflow:hidden}
+dialog.side{margin:0 0 0 auto;width:min(640px,100%);height:100%;max-height:100%}
+dialog.side[open]{animation:slide .35s var(--ease)}
+@keyframes slide{from{transform:translateX(30px);opacity:0}to{transform:none;opacity:1}}
+.dlg-head{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;padding:22px clamp(20px,4vw,40px) 16px;border-bottom:1px solid var(--border)}
+.dlg-head h2{font-size:clamp(1.7rem,4vw,2.3rem)}
+.dlg-body{padding:20px clamp(20px,4vw,40px) 32px;overflow:auto;flex:1;overscroll-behavior:contain}
+.icon-btn{width:48px;height:48px;border:1px solid var(--border);background:transparent;cursor:pointer;display:grid;place-items:center;flex:none;border-radius:2px}
+.icon-btn:hover{border-color:var(--charcoal)}
+.icon-btn svg{width:20px;height:20px}
+.policy h3{font-size:1.3rem;margin:1.6rem 0 .4rem}
+.policy p,.policy li{color:var(--muted);margin-bottom:.6rem}
+.policy ul{list-style:disc;padding-left:1.3rem}
+
+/* Form */
+.form{display:grid;gap:18px}
+.field{display:grid;gap:6px}
+.field>label,.field>legend,fieldset legend{font-weight:500;font-size:.95rem;padding:0}
+.req{color:var(--forest)}
+.hint{font-size:.85rem;color:var(--muted)}
+.input{width:100%;min-height:48px;padding:.7rem .9rem;border:1px solid #9aa59d;background:var(--white);border-radius:2px;font-size:1rem}
+textarea.input{min-height:110px;resize:vertical}
+.input:hover{border-color:var(--charcoal)}
+.input[aria-invalid=true]{border-color:#a3321f;background:#fff8f6}
+.err{color:#9b2c1a;font-size:.88rem;font-weight:500;min-height:0}
+fieldset{border:0;padding:0;margin:0;min-width:0}
+.radios{display:flex;flex-wrap:wrap;gap:8px 10px;margin-top:6px}
+.radios label{display:inline-flex;align-items:center;gap:8px;border:1px solid #9aa59d;background:#fff;padding:0 14px;min-height:46px;cursor:pointer;border-radius:2px;font-size:.97rem}
+.radios input{accent-color:var(--forest);width:18px;height:18px}
+.radios label:has(input:checked){border-color:var(--forest);background:#eaf0ea}
+.radios label:has(input:focus-visible){outline:2px solid var(--forest);outline-offset:2px}
+.notice{border-left:3px solid var(--forest);background:#eaf0ea;padding:12px 14px;font-size:.92rem}
+.notice.warn{border-color:#a3321f;background:#fbeee9;color:#5c1b10}
+.form-status{font-size:.95rem}
+.form-actions{display:grid;gap:12px;margin-top:4px}
+.form-actions .btn{width:100%}
+@media(min-width:560px){.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}}
+
+/* Lightbox */
+dialog.lightbox{background:var(--charcoal);color:#fff;width:min(1100px,100vw);max-height:100dvh;margin:auto}
+.lb{display:grid;grid-template-rows:1fr auto;max-height:100dvh}
+.lb img{max-width:100%;max-height:calc(100dvh - 110px);margin:auto;object-fit:contain}
+.lb-bar{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:12px 16px;font-size:.95rem}
+.lb-bar .icon-btn{border-color:rgba(255,255,255,.35);color:#fff}
+.lb-nav{display:flex;gap:8px}
+.lb-close{position:absolute;top:10px;right:10px;border-color:rgba(255,255,255,.4);color:#fff;background:rgba(23,28,27,.6)}
+
+/* Consent */
+.consent{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--charcoal);color:var(--ivory);border-top:1px solid rgba(183,197,184,.35);padding:16px var(--pad) max(16px,env(safe-area-inset-bottom));max-height:80vh;overflow:auto}
+.consent-inner{max-width:var(--max);margin:auto;display:grid;gap:14px 32px}
+@media(min-width:900px){.consent-inner{grid-template-columns:1fr auto;align-items:center}}
+.consent p{font-size:.93rem;line-height:1.5;max-width:60em}
+.consent .link{color:var(--sage)}
+.consent-actions{display:flex;flex-wrap:wrap;gap:8px}
+.consent .btn{min-height:44px;padding:.55rem 1.1rem;font-size:.95rem}
+.consent .btn-ghost{color:var(--ivory)}
+.consent .btn-ghost:hover{background:var(--ivory);color:var(--charcoal)}
+.consent-prefs{display:grid;gap:12px;grid-column:1/-1}
+.pref{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-top:1px solid rgba(183,197,184,.3)}
+.pref input{width:22px;height:22px;margin-top:2px;accent-color:var(--sage);flex:none}
+.pref small{display:block;color:var(--sage)}
+.pref label{cursor:pointer}
+
+/* Reveal */
+.js .reveal{opacity:0;transform:translateY(14px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .js .reveal{opacity:1;transform:none}
+}
+@media print{.wa-float,.consent,.utility{display:none}}
+
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Ir para o conteúdo</a>
+<div id="app"></div>
+<noscript><p style="padding:2rem;font-family:sans-serif">Este site precisa de JavaScript ativado para exibir o conteúdo.</p></noscript>
+<script>
+/**
+ * HOME SERVICES ELITE — Novyra Studio
+ * Fonte única de verdade para todos os dados do cliente.
+ * Edite somente este arquivo. Valores marcados como EXEMPLO são conteúdo de demonstração.
+ * Qualquer seção sem dados é ocultada automaticamente.
+ *
+ * @typedef {{src:string, alt:string, width?:number, height?:number}} Img
+ * @typedef {{id:string, name:string, description:string, image?:Img, enabled?:boolean}} Service
+ * @typedef {{title:string, text:string}} TextItem
+ * @typedef {{quote:string, name?:string, sourceLabel?:string, sourceUrl?:string}} Testimonial
+ * @typedef {{q:string, a:string}} Faq
+ * @typedef {{label:string, url:string}} Social
+ */
+window.HSE_CONFIG = {
+  /** true = o template ainda tem conteúdo de exemplo. Desativa dados estruturados de SEO. */
+  isSample: true,
+  /** URL real de produção (ex.: "https://www.cliente.com.br/"). Deixe "" até publicar. */
+  siteUrl: "",
+  lang: "pt-BR",
+
+  business: {
+    name: "Exemplo Serviços Residenciais",
+    logo: { text: "Exemplo Serviços Residenciais", mark: "E", image: "" },
+    tagline: "Serviços residenciais premium",
+    category: "Serviços residenciais",
+    footerDescription:
+      "Soluções cuidadosas para o trabalho essencial que mantém sua casa confortável, funcional e bem cuidada.",
+    seo: {
+      title: "Exemplo Serviços Residenciais | Serviços para sua casa",
+      description:
+        "Serviços residenciais com comunicação clara e acabamento cuidadoso. Solicite um orçamento online.",
+      ogImage: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDE1MDAiIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjE1MDAiPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI0I3QzVCOCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzM1NTg0NyIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJsIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZmZmIiBzdG9wLW9wYWNpdHk9IjAiLz48c3RvcCBvZmZzZXQ9Ii41IiBzdG9wLWNvbG9yPSIjZmZmIiBzdG9wLW9wYWNpdHk9Ii4xNiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iMTUwMCIgZmlsbD0idXJsKCNnKSIvPjxyZWN0IHk9IjEwODAiIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjQyMCIgZmlsbD0iIzM1NTg0NyIgb3BhY2l0eT0iLjU1Ii8+PHJlY3QgeD0iMjE2IiB5PSIyMTAiIHdpZHRoPSIzMzYiIGhlaWdodD0iNTEwIiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9Ii4xNCIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utb3BhY2l0eT0iLjM1IiBzdHJva2Utd2lkdGg9IjMiLz48cGF0aCBkPSJNMzg0IDIxMCBWNzIwIE0yMTYgNDY1IEg1NTIiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4zIiBzdHJva2Utd2lkdGg9IjMiLz48cG9seWdvbiBwb2ludHM9IjIxNiw3MjAgNTUyLDcyMCAxMDgwLDEwODAgNjAwLDEwODAiIGZpbGw9InVybCgjbCkiLz48cmVjdCB4PSI2OTYiIHk9IjY5MCIgd2lkdGg9IjI0MCIgaGVpZ2h0PSIzOTAiIHJ4PSI0IiBmaWxsPSIjMTcxQzFCIiBvcGFjaXR5PSIuODUiLz48Y2lyY2xlIGN4PSIxNDQiIGN5PSI5MzAiIHI9IjYwIiBmaWxsPSIjMTcxQzFCIiBvcGFjaXR5PSIuNSIvPjx0ZXh0IHg9IjExNzYiIHk9IjE0NzYiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE3IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9Ii43NSI+SW1hZ2VtIGRlIGV4ZW1wbG8gLSBzdWJzdGl0dWEgcG9yIGZvdG8gcmVhbDwvdGV4dD48L3N2Zz4="
+    }
+  },
+
+  theme: {
+    charcoal: "#171C1B",
+    forest: "#355847",
+    ivory: "#F4F1E9",
+    sage: "#B7C5B8",
+    white: "#FFFFFF",
+    muted: "#5B645E",
+    border: "#D9DED8"
+  },
+
+  contact: {
+    phone: "+1 555 010 0100", // EXEMPLO (faixa fictícia reservada). Troque pelo número real.
+    whatsapp: "+1 555 010 0100", // EXEMPLO. Use código do país + DDD + número (8 a 15 dígitos)
+    email: "contato@exemplo.com.br", // EXEMPLO
+    address: "",
+    showAddress: true,
+    mapsUrl: "",
+    hours: [
+      { days: "Segunda a sexta", time: "8h às 18h" },
+      { days: "Sábado", time: "9h às 13h" }
+    ],
+    responseNote: ""
+  },
+
+  utilityBar: { enabled: true, showArea: true, showHours: true, showPhone: true },
+
+  area: {
+    main: "Cidade Exemplo", // EXEMPLO
+    additional: ["Bairro Norte", "Centro", "Zona Sul"], // EXEMPLO — liste só o que o cliente realmente atende
+    note: "Não tem certeza se atendemos seu endereço? Envie uma mensagem e confirmamos."
+  },
+
+  hero: {
+    eyebrow: "Atenção ao serviço. Cuidado em cada detalhe.",
+    headline: "Sua casa em mãos especializadas.",
+    description:
+      "Soluções cuidadosas para o trabalho essencial que mantém sua casa confortável, funcional e bem cuidada.",
+    primaryCta: "Solicitar orçamento",
+    secondaryCta: "Conheça os serviços",
+    serviceLabel: "Serviços residenciais",
+    image: {
+      src: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDE1MDAiIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjE1MDAiPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI0I3QzVCOCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzM1NTg0NyIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJsIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZmZmIiBzdG9wLW9wYWNpdHk9IjAiLz48c3RvcCBvZmZzZXQ9Ii41IiBzdG9wLWNvbG9yPSIjZmZmIiBzdG9wLW9wYWNpdHk9Ii4xNiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iMTUwMCIgZmlsbD0idXJsKCNnKSIvPjxyZWN0IHk9IjEwODAiIHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjQyMCIgZmlsbD0iIzM1NTg0NyIgb3BhY2l0eT0iLjU1Ii8+PHJlY3QgeD0iMjE2IiB5PSIyMTAiIHdpZHRoPSIzMzYiIGhlaWdodD0iNTEwIiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9Ii4xNCIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utb3BhY2l0eT0iLjM1IiBzdHJva2Utd2lkdGg9IjMiLz48cGF0aCBkPSJNMzg0IDIxMCBWNzIwIE0yMTYgNDY1IEg1NTIiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4zIiBzdHJva2Utd2lkdGg9IjMiLz48cG9seWdvbiBwb2ludHM9IjIxNiw3MjAgNTUyLDcyMCAxMDgwLDEwODAgNjAwLDEwODAiIGZpbGw9InVybCgjbCkiLz48cmVjdCB4PSI2OTYiIHk9IjY5MCIgd2lkdGg9IjI0MCIgaGVpZ2h0PSIzOTAiIHJ4PSI0IiBmaWxsPSIjMTcxQzFCIiBvcGFjaXR5PSIuODUiLz48Y2lyY2xlIGN4PSIxNDQiIGN5PSI5MzAiIHI9IjYwIiBmaWxsPSIjMTcxQzFCIiBvcGFjaXR5PSIuNSIvPjx0ZXh0IHg9IjExNzYiIHk9IjE0NzYiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE3IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9Ii43NSI+SW1hZ2VtIGRlIGV4ZW1wbG8gLSBzdWJzdGl0dWEgcG9yIGZvdG8gcmVhbDwvdGV4dD48L3N2Zz4=",
+      alt: "Imagem de exemplo: um ambiente residencial claro e tranquilo. Substitua por uma foto real do trabalho do cliente.",
+      width: 1200,
+      height: 1500
+    }
+  },
+
+  cta: {
+    estimate: "Solicitar orçamento",
+    contact: "Fale conosco",
+    whatsappFloat: { enabled: true, action: "whatsapp" } // "whatsapp" (conversa direta) ou "form" (abre o formulário)
+  },
+
+  services: {
+    title: "Especialistas em cada detalhe essencial",
+    intro: "Escolha um serviço para iniciar o pedido de orçamento já com ele selecionado.",
+    actionLabel: "Solicitar orçamento",
+    items: [
+      {
+        id: "climatizacao",
+        name: "Climatização",
+        description: "Instalação, manutenção e reparo dos sistemas que mantêm sua casa na temperatura certa.",
+        image: { src: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDAwIDEwMDAiIHdpZHRoPSIxNDAwIiBoZWlnaHQ9IjEwMDAiPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI0I3QzVCOCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzM1NTg0NyIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJsIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZmZmIiBzdG9wLW9wYWNpdHk9IjAiLz48c3RvcCBvZmZzZXQ9Ii41IiBzdG9wLWNvbG9yPSIjZmZmIiBzdG9wLW9wYWNpdHk9Ii4xNiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjE0MDAiIGhlaWdodD0iMTAwMCIgZmlsbD0idXJsKCNnKSIvPjxyZWN0IHk9IjcyMCIgd2lkdGg9IjE0MDAiIGhlaWdodD0iMjgwIiBmaWxsPSIjMzU1ODQ3IiBvcGFjaXR5PSIuNTUiLz48cmVjdCB4PSIzOTIiIHk9IjE0MCIgd2lkdGg9IjM5MiIgaGVpZ2h0PSIzNDAiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjE0IiBzdHJva2U9IiNmZmYiIHN0cm9rZS1vcGFjaXR5PSIuMzUiIHN0cm9rZS13aWR0aD0iMyIvPjxwYXRoIGQ9Ik01ODggMTQwIFY0ODAgTTM5MiAzMTAgSDc4NCIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utb3BhY2l0eT0iLjMiIHN0cm9rZS13aWR0aD0iMyIvPjxwb2x5Z29uIHBvaW50cz0iMzkyLDQ4MCA3ODQsNDgwIDEyNjAsNzIwIDcwMCw3MjAiIGZpbGw9InVybCgjbCkiLz48cmVjdCB4PSI4ODIiIHk9IjQ2MCIgd2lkdGg9IjI4MCIgaGVpZ2h0PSIyNjAiIHJ4PSI0IiBmaWxsPSIjMTcxQzFCIiBvcGFjaXR5PSIuODUiLz48Y2lyY2xlIGN4PSIxNjgiIGN5PSI2MjAiIHI9IjcwIiBmaWxsPSIjMTcxQzFCIiBvcGFjaXR5PSIuNSIvPjx0ZXh0IHg9IjEzNzYiIHk9Ijk3NiIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjc1Ij5JbWFnZW0gZGUgZXhlbXBsbyAtIHN1YnN0aXR1YSBwb3IgZm90byByZWFsPC90ZXh0Pjwvc3ZnPg==", alt: "Imagem de exemplo do serviço de climatização. Substitua por uma foto real.", width: 1400, height: 1000 }
+      },
+      {
+        id: "eletrica",
+        name: "Serviços elétricos",
+        description: "Trabalho elétrico seguro e organizado, de luminárias e tomadas a quadros e fiação.",
+        image: { src: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAwIDEyNTAiIHdpZHRoPSIxMDAwIiBoZWlnaHQ9IjEyNTAiPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI0M5RDNDQSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzE3MUMxQiIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJsIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZmZmIiBzdG9wLW9wYWNpdHk9IjAiLz48c3RvcCBvZmZzZXQ9Ii41IiBzdG9wLWNvbG9yPSIjZmZmIiBzdG9wLW9wYWNpdHk9Ii4xNiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMDAiIGhlaWdodD0iMTI1MCIgZmlsbD0idXJsKCNnKSIvPjxyZWN0IHk9IjkwMCIgd2lkdGg9IjEwMDAiIGhlaWdodD0iMzUwIiBmaWxsPSIjMTcxQzFCIiBvcGFjaXR5PSIuNTUiLz48cmVjdCB4PSIzODAiIHk9IjE3NSIgd2lkdGg9IjI4MCIgaGVpZ2h0PSI0MjUiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjE0IiBzdHJva2U9IiNmZmYiIHN0cm9rZS1vcGFjaXR5PSIuMzUiIHN0cm9rZS13aWR0aD0iMyIvPjxwYXRoIGQ9Ik01MjAgMTc1IFY2MDAgTTM4MCAzODcgSDY2MCIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utb3BhY2l0eT0iLjMiIHN0cm9rZS13aWR0aD0iMyIvPjxwb2x5Z29uIHBvaW50cz0iMzgwLDYwMCA2NjAsNjAwIDkwMCw5MDAgNTAwLDkwMCIgZmlsbD0idXJsKCNsKSIvPjxyZWN0IHg9IjY3OSIgeT0iNTc1IiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjMyNSIgcng9IjQiIGZpbGw9IiMzNTU4NDciIG9wYWNpdHk9Ii44NSIvPjxjaXJjbGUgY3g9IjEyMCIgY3k9Ijc3NSIgcj0iNTAiIGZpbGw9IiMzNTU4NDciIG9wYWNpdHk9Ii41Ii8+PHRleHQgeD0iOTc2IiB5PSIxMjI2IiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iI2ZmZiIgZmlsbC1vcGFjaXR5PSIuNzUiPkltYWdlbSBkZSBleGVtcGxvIC0gc3Vic3RpdHVhIHBvciBmb3RvIHJlYWw8L3RleHQ+PC9zdmc+", alt: "Imagem de exemplo do serviço elétrico. Substitua por uma foto real.", width: 1000, height: 1250 }
+      },
+      {
+        id: "hidraulica",
+        name: "Hidráulica",
+        description: "Reparos, trocas e instalações feitos com cuidado com pisos e acabamentos."
+      },
+      {
+        id: "reparos",
+        name: "Reparos residenciais",
+        description: "Os pequenos e médios serviços que mantêm a casa funcionando como deveria."
+      }
+    ]
+  },
+
+  statement: {
+    headline: "O bom trabalho está nos detalhes.",
+    text: "Acreditamos em comunicação clara, trabalho cuidadoso e respeito pelo seu imóvel. Esse é o padrão que buscamos manter em cada visita."
+  },
+
+  approach: {
+    title: "Como trabalhamos",
+    intro: "Um processo simples, para você saber sempre o que vem a seguir.",
+    steps: [
+      { title: "Entender a necessidade", text: "Você conta o que está acontecendo e o que precisa. Fazemos as perguntas certas antes de começar qualquer coisa." },
+      { title: "Planejar o trabalho", text: "Explicamos as opções, o escopo e o prazo em linguagem simples, para você decidir com segurança." },
+      { title: "Concluir o serviço", text: "O trabalho é executado com cuidado, o local fica limpo e confirmamos que tudo está funcionando como esperado." }
+    ]
+  },
+
+  midCta: {
+    enabled: true,
+    headline: "Conte o que sua casa precisa.",
+    text: "Envie alguns detalhes e cuidamos do resto.",
+    button: "Solicitar orçamento"
+  },
+
+  featuredProject: {
+    enabled: true,
+    isSample: true,
+    title: "Título do projeto de exemplo",
+    category: "Serviços residenciais",
+    location: "",
+    description:
+      "Este é um conteúdo de demonstração. Substitua por um projeto real concluído: o que era necessário, como foi feito e qual foi o resultado.",
+    image: { src: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxODAwIDExMDAiIHdpZHRoPSIxODAwIiBoZWlnaHQ9IjExMDAiPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzM1NTg0NyIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzE3MUMxQiIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJsIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZmZmIiBzdG9wLW9wYWNpdHk9IjAiLz48c3RvcCBvZmZzZXQ9Ii41IiBzdG9wLWNvbG9yPSIjZmZmIiBzdG9wLW9wYWNpdHk9Ii4xNiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjE4MDAiIGhlaWdodD0iMTEwMCIgZmlsbD0idXJsKCNnKSIvPjxyZWN0IHk9Ijc5MiIgd2lkdGg9IjE4MDAiIGhlaWdodD0iMzA4IiBmaWxsPSIjMTcxQzFCIiBvcGFjaXR5PSIuNTUiLz48cmVjdCB4PSI1MDQiIHk9IjE1NCIgd2lkdGg9IjUwNCIgaGVpZ2h0PSIzNzQiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjE0IiBzdHJva2U9IiNmZmYiIHN0cm9rZS1vcGFjaXR5PSIuMzUiIHN0cm9rZS13aWR0aD0iMyIvPjxwYXRoIGQ9Ik03NTYgMTU0IFY1MjggTTUwNCAzNDEgSDEwMDgiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4zIiBzdHJva2Utd2lkdGg9IjMiLz48cG9seWdvbiBwb2ludHM9IjUwNCw1MjggMTAwOCw1MjggMTYyMCw3OTIgOTAwLDc5MiIgZmlsbD0idXJsKCNsKSIvPjxyZWN0IHg9IjExMzQiIHk9IjUwNiIgd2lkdGg9IjM2MCIgaGVpZ2h0PSIyODYiIHJ4PSI0IiBmaWxsPSIjQjdDNUI4IiBvcGFjaXR5PSIuODUiLz48Y2lyY2xlIGN4PSIyMTYiIGN5PSI2ODIiIHI9IjkwIiBmaWxsPSIjQjdDNUI4IiBvcGFjaXR5PSIuNSIvPjx0ZXh0IHg9IjE3NzYiIHk9IjEwNzYiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjI1IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9Ii43NSI+SW1hZ2VtIGRlIGV4ZW1wbG8gLSBzdWJzdGl0dWEgcG9yIGZvdG8gcmVhbDwvdGV4dD48L3N2Zz4=", alt: "Imagem de exemplo de projeto em destaque. Substitua por uma foto real do projeto.", width: 1800, height: 1100 },
+    cta: "Solicitar orçamento parecido"
+  },
+
+  gallery: {
+    title: "Trabalhos recentes",
+    intro: "Uma seleção de serviços concluídos.",
+    lightbox: true,
+    sampleNotice: "Imagens de exemplo. São apenas ilustrações, não o trabalho real da empresa.",
+    items: [
+      { src: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDkwMCIgd2lkdGg9IjEyMDAiIGhlaWdodD0iOTAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNCN0M1QjgiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMzNTU4NDciLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0ibCIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjAiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+PHN0b3Agb2Zmc2V0PSIuNSIgc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIuMTYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNmZmYiIHN0b3Atb3BhY2l0eT0iMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjkwMCIgZmlsbD0idXJsKCNnKSIvPjxyZWN0IHk9IjY0OCIgd2lkdGg9IjEyMDAiIGhlaWdodD0iMjUyIiBmaWxsPSIjMzU1ODQ3IiBvcGFjaXR5PSIuNTUiLz48cmVjdCB4PSIyMTYiIHk9IjEyNiIgd2lkdGg9IjMzNiIgaGVpZ2h0PSIzMDYiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjE0IiBzdHJva2U9IiNmZmYiIHN0cm9rZS1vcGFjaXR5PSIuMzUiIHN0cm9rZS13aWR0aD0iMyIvPjxwYXRoIGQ9Ik0zODQgMTI2IFY0MzIgTTIxNiAyNzkgSDU1MiIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utb3BhY2l0eT0iLjMiIHN0cm9rZS13aWR0aD0iMyIvPjxwb2x5Z29uIHBvaW50cz0iMjE2LDQzMiA1NTIsNDMyIDEwODAsNjQ4IDYwMCw2NDgiIGZpbGw9InVybCgjbCkiLz48cmVjdCB4PSI2OTYiIHk9IjQxNCIgd2lkdGg9IjI0MCIgaGVpZ2h0PSIyMzQiIHJ4PSI0IiBmaWxsPSIjMTcxQzFCIiBvcGFjaXR5PSIuODUiLz48Y2lyY2xlIGN4PSIxNDQiIGN5PSI1NTgiIHI9IjYwIiBmaWxsPSIjMTcxQzFCIiBvcGFjaXR5PSIuNSIvPjx0ZXh0IHg9IjExNzYiIHk9Ijg3NiIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjc1Ij5JbWFnZW0gZGUgZXhlbXBsbyAtIHN1YnN0aXR1YSBwb3IgZm90byByZWFsPC90ZXh0Pjwvc3ZnPg==", alt: "Imagem de exemplo 1 de um serviço concluído", caption: "Legenda de exemplo", width: 1200, height: 900 },
+      { src: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5MDAgMTIwMCIgd2lkdGg9IjkwMCIgaGVpZ2h0PSIxMjAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNDOUQzQ0EiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMzNTU4NDciLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0ibCIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjAiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+PHN0b3Agb2Zmc2V0PSIuNSIgc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIuMTYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNmZmYiIHN0b3Atb3BhY2l0eT0iMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSI5MDAiIGhlaWdodD0iMTIwMCIgZmlsbD0idXJsKCNnKSIvPjxyZWN0IHk9Ijg2NCIgd2lkdGg9IjkwMCIgaGVpZ2h0PSIzMzYiIGZpbGw9IiMzNTU4NDciIG9wYWNpdHk9Ii41NSIvPjxyZWN0IHg9IjI1MiIgeT0iMTY4IiB3aWR0aD0iMjUyIiBoZWlnaHQ9IjQwOCIgZmlsbD0iI2ZmZiIgZmlsbC1vcGFjaXR5PSIuMTQiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4zNSIgc3Ryb2tlLXdpZHRoPSIzIi8+PHBhdGggZD0iTTM3OCAxNjggVjU3NiBNMjUyIDM3MiBINTA0IiBzdHJva2U9IiNmZmYiIHN0cm9rZS1vcGFjaXR5PSIuMyIgc3Ryb2tlLXdpZHRoPSIzIi8+PHBvbHlnb24gcG9pbnRzPSIyNTIsNTc2IDUwNCw1NzYgODEwLDg2NCA0NTAsODY0IiBmaWxsPSJ1cmwoI2wpIi8+PHJlY3QgeD0iNTY3IiB5PSI1NTIiIHdpZHRoPSIxODAiIGhlaWdodD0iMzEyIiByeD0iNCIgZmlsbD0iIzE3MUMxQiIgb3BhY2l0eT0iLjg1Ii8+PGNpcmNsZSBjeD0iMTA4IiBjeT0iNzQ0IiByPSI0NSIgZmlsbD0iIzE3MUMxQiIgb3BhY2l0eT0iLjUiLz48dGV4dCB4PSI4NzYiIHk9IjExNzYiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9Ii43NSI+SW1hZ2VtIGRlIGV4ZW1wbG8gLSBzdWJzdGl0dWEgcG9yIGZvdG8gcmVhbDwvdGV4dD48L3N2Zz4=", alt: "Imagem de exemplo 2 de um serviço concluído", caption: "Legenda de exemplo", width: 900, height: 1200 },
+      { src: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAwIDEwMDAiIHdpZHRoPSIxMDAwIiBoZWlnaHQ9IjEwMDAiPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI0Y0RjFFOSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzM1NTg0NyIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJsIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjZmZmIiBzdG9wLW9wYWNpdHk9IjAiLz48c3RvcCBvZmZzZXQ9Ii41IiBzdG9wLWNvbG9yPSIjZmZmIiBzdG9wLW9wYWNpdHk9Ii4xNiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMDAiIGhlaWdodD0iMTAwMCIgZmlsbD0idXJsKCNnKSIvPjxyZWN0IHk9IjcyMCIgd2lkdGg9IjEwMDAiIGhlaWdodD0iMjgwIiBmaWxsPSIjMzU1ODQ3IiBvcGFjaXR5PSIuNTUiLz48cmVjdCB4PSIzODAiIHk9IjE0MCIgd2lkdGg9IjI4MCIgaGVpZ2h0PSIzNDAiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjE0IiBzdHJva2U9IiNmZmYiIHN0cm9rZS1vcGFjaXR5PSIuMzUiIHN0cm9rZS13aWR0aD0iMyIvPjxwYXRoIGQ9Ik01MjAgMTQwIFY0ODAgTTM4MCAzMTAgSDY2MCIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utb3BhY2l0eT0iLjMiIHN0cm9rZS13aWR0aD0iMyIvPjxwb2x5Z29uIHBvaW50cz0iMzgwLDQ4MCA2NjAsNDgwIDkwMCw3MjAgNTAwLDcyMCIgZmlsbD0idXJsKCNsKSIvPjxyZWN0IHg9IjY3OSIgeT0iNDYwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI2MCIgcng9IjQiIGZpbGw9IiMxNzFDMUIiIG9wYWNpdHk9Ii44NSIvPjxjaXJjbGUgY3g9IjEyMCIgY3k9IjYyMCIgcj0iNTAiIGZpbGw9IiMxNzFDMUIiIG9wYWNpdHk9Ii41Ii8+PHRleHQgeD0iOTc2IiB5PSI5NzYiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9Ii43NSI+SW1hZ2VtIGRlIGV4ZW1wbG8gLSBzdWJzdGl0dWEgcG9yIGZvdG8gcmVhbDwvdGV4dD48L3N2Zz4=", alt: "Imagem de exemplo 3 de um serviço concluído", caption: "Legenda de exemplo", width: 1000, height: 1000 },
+      { src: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDkwMCIgd2lkdGg9IjEyMDAiIGhlaWdodD0iOTAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMzNTU4NDciLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMxNzFDMUIiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0ibCIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjAiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+PHN0b3Agb2Zmc2V0PSIuNSIgc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIuMTYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNmZmYiIHN0b3Atb3BhY2l0eT0iMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjkwMCIgZmlsbD0idXJsKCNnKSIvPjxyZWN0IHk9IjY0OCIgd2lkdGg9IjEyMDAiIGhlaWdodD0iMjUyIiBmaWxsPSIjMTcxQzFCIiBvcGFjaXR5PSIuNTUiLz48cmVjdCB4PSIyMTYiIHk9IjEyNiIgd2lkdGg9IjMzNiIgaGVpZ2h0PSIzMDYiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjE0IiBzdHJva2U9IiNmZmYiIHN0cm9rZS1vcGFjaXR5PSIuMzUiIHN0cm9rZS13aWR0aD0iMyIvPjxwYXRoIGQ9Ik0zODQgMTI2IFY0MzIgTTIxNiAyNzkgSDU1MiIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utb3BhY2l0eT0iLjMiIHN0cm9rZS13aWR0aD0iMyIvPjxwb2x5Z29uIHBvaW50cz0iMjE2LDQzMiA1NTIsNDMyIDEwODAsNjQ4IDYwMCw2NDgiIGZpbGw9InVybCgjbCkiLz48cmVjdCB4PSI2OTYiIHk9IjQxNCIgd2lkdGg9IjI0MCIgaGVpZ2h0PSIyMzQiIHJ4PSI0IiBmaWxsPSIjQjdDNUI4IiBvcGFjaXR5PSIuODUiLz48Y2lyY2xlIGN4PSIxNDQiIGN5PSI1NTgiIHI9IjYwIiBmaWxsPSIjQjdDNUI4IiBvcGFjaXR5PSIuNSIvPjx0ZXh0IHg9IjExNzYiIHk9Ijg3NiIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjc1Ij5JbWFnZW0gZGUgZXhlbXBsbyAtIHN1YnN0aXR1YSBwb3IgZm90byByZWFsPC90ZXh0Pjwvc3ZnPg==", alt: "Imagem de exemplo 4 de um serviço concluído", caption: "Legenda de exemplo", width: 1200, height: 900 }
+    ],
+    itemsAreSample: true
+  },
+
+  why: {
+    title: "Por que trabalhar conosco",
+    items: [
+      { title: "Comunicação clara", text: "Explicações em linguagem simples e atualizações antes, durante e depois do serviço." },
+      { title: "Respeito pela sua casa", text: "Pisos protegidos, área de trabalho organizada e seu tempo levado a sério." },
+      { title: "Atenção aos detalhes", text: "O trabalho é conferido antes de ser considerado concluído." },
+      { title: "Agendamento prático", text: "Buscamos um horário que se encaixe na sua rotina." },
+      { title: "Orçamento objetivo", text: "Você sabe o que está incluído antes de o trabalho começar." },
+      { title: "Atendimento profissional", text: "Cortesia, pontualidade e foco no serviço." }
+    ]
+  },
+
+  about: {
+    title: "Uma forma mais cuidadosa de cuidar da sua casa",
+    paragraphs: [
+      "Oferecemos serviços residenciais para quem valoriza comunicação, bom acabamento e organização.",
+      "Cada casa é diferente. Por isso, começamos ouvindo e só então recomendamos o serviço que faz sentido para você."
+    ],
+    philosophy: "Fazer o trabalho direito, explicar com clareza e deixar a casa melhor do que encontramos.",
+    image: { src: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDkwMCIgd2lkdGg9IjEyMDAiIGhlaWdodD0iOTAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNCN0M1QjgiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM4RkE0OTQiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCBpZD0ibCIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjAiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+PHN0b3Agb2Zmc2V0PSIuNSIgc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIuMTYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNmZmYiIHN0b3Atb3BhY2l0eT0iMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjkwMCIgZmlsbD0idXJsKCNnKSIvPjxyZWN0IHk9IjY0OCIgd2lkdGg9IjEyMDAiIGhlaWdodD0iMjUyIiBmaWxsPSIjOEZBNDk0IiBvcGFjaXR5PSIuNTUiLz48cmVjdCB4PSI0NTYiIHk9IjEyNiIgd2lkdGg9IjMzNiIgaGVpZ2h0PSIzMDYiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjE0IiBzdHJva2U9IiNmZmYiIHN0cm9rZS1vcGFjaXR5PSIuMzUiIHN0cm9rZS13aWR0aD0iMyIvPjxwYXRoIGQ9Ik02MjQgMTI2IFY0MzIgTTQ1NiAyNzkgSDc5MiIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utb3BhY2l0eT0iLjMiIHN0cm9rZS13aWR0aD0iMyIvPjxwb2x5Z29uIHBvaW50cz0iNDU2LDQzMiA3OTIsNDMyIDEwODAsNjQ4IDYwMCw2NDgiIGZpbGw9InVybCgjbCkiLz48cmVjdCB4PSI4MTUiIHk9IjQxNCIgd2lkdGg9IjI0MCIgaGVpZ2h0PSIyMzQiIHJ4PSI0IiBmaWxsPSIjMTcxQzFCIiBvcGFjaXR5PSIuODUiLz48Y2lyY2xlIGN4PSIxNDQiIGN5PSI1NTgiIHI9IjYwIiBmaWxsPSIjMTcxQzFCIiBvcGFjaXR5PSIuNSIvPjx0ZXh0IHg9IjExNzYiIHk9Ijg3NiIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iLjc1Ij5JbWFnZW0gZGUgZXhlbXBsbyAtIHN1YnN0aXR1YSBwb3IgZm90byByZWFsPC90ZXh0Pjwvc3ZnPg==", alt: "Imagem de exemplo para a foto da equipe. Substitua por uma foto real.", width: 1200, height: 900 },
+    imageIsSample: true,
+    cta: "Fale conosco",
+    team: []
+  },
+
+  areas: {
+    title: "Perto de você quando sua casa precisa",
+    mapLabel: "Ver no Google Maps"
+  },
+
+  /** Somente depoimentos reais e verificados. Vazio = seção oculta. */
+  testimonials: [],
+
+  faq: {
+    title: "Perguntas frequentes",
+    items: [
+      { q: "Quais serviços vocês oferecem?", a: "Veja a seção de serviços acima. Se não tiver certeza de que podemos ajudar, envie uma mensagem com os detalhes." },
+      { q: "Quais regiões vocês atendem?", a: "As áreas de atendimento estão listadas na seção correspondente. Se o seu endereço não aparece, entre em contato e confirmamos." },
+      { q: "Como funcionam os orçamentos?", a: "Envie os detalhes do serviço pelo formulário. Analisamos o pedido e respondemos para combinar os próximos passos e os detalhes do orçamento." },
+      { q: "Como posso agendar um serviço?", a: "Solicite um orçamento ou fale conosco por telefone, WhatsApp ou e-mail. Combinaremos um horário adequado." },
+      { q: "Quais informações devo enviar no pedido de orçamento?", a: "Seu nome, telefone ou WhatsApp, cidade ou CEP, o serviço desejado e uma breve descrição do que precisa." }
+    ]
+  },
+
+  contact_section: {
+    title: "Diga como podemos ajudar",
+    intro: "Fale conosco da forma que for mais conveniente para você."
+  },
+
+  social: [],
+
+  privacy: {
+    url: "",
+    controllerName: "",
+    contactEmail: ""
+  },
+
+  integrations: {
+    analytics: { ga4MeasurementId: "" },
+    advertising: { metaPixelId: "", googleAdsId: "" }
+  },
+
+  fonts: {
+    provider: "google",
+    headingStack: '"Newsreader", "Iowan Old Style", Georgia, "Times New Roman", serif',
+    bodyStack: '"Hanken Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif'
+  },
+
+  footer: { showAttribution: true, attributionText: "Site por Novyra Studio", attributionUrl: "" },
+
+  devWarnings: false
+};
+
+/* HOME SERVICES ELITE — Novyra Studio. Renders the whole site from window.HSE_CONFIG. No dependencies. */
+(function () {
+  'use strict';
+  const C = window.HSE_CONFIG;
+  if (!C) { console.error('[Home Services Elite] src/config.js did not load.'); return; }
+
+  /* ---------- helpers ---------- */
+  const $ = (s, r) => (r || document).querySelector(s);
+  const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
+  const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const digits = (s) => String(s || '').replace(/\D/g, '');
+  const isHttps = (u) => /^https:\/\/[^\s"<>]+$/i.test(String(u || ''));
+  const waNumber = () => { const d = digits(C.contact.whatsapp); return d.length >= 8 && d.length <= 15 ? d : ''; };
+  const isDev = () => C.devWarnings || ['localhost', '127.0.0.1', '[::1]', ''].includes(location.hostname);
+  const reduced = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const B = C.business, K = C.contact;
+  const services = (C.services.items || []).filter((s) => s && s.enabled !== false);
+  const icons = {
+    close: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>',
+    prev: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>',
+    next: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>',
+    check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>',
+    wa: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 00-8.47 15.04L2 22l5.1-1.34A9.9 9.9 0 1012.04 2zm0 1.8a8.1 8.1 0 11-4.2 15.03l-.3-.18-3.02.8.81-2.95-.2-.31A8.1 8.1 0 0112.04 3.8zm-3.1 3.9c-.2 0-.5.07-.77.37-.26.3-1 1-1 2.43s1.03 2.82 1.17 3.01c.15.2 2.02 3.22 5 4.38 2.47.97 2.97.78 3.5.73.54-.05 1.73-.7 1.97-1.39.25-.68.25-1.27.17-1.39-.07-.12-.27-.2-.56-.34-.3-.15-1.73-.86-2-.96-.27-.1-.47-.15-.66.15-.2.3-.76.96-.93 1.16-.17.2-.34.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.64-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.66-1.6-.91-2.18-.24-.57-.48-.5-.66-.5z"/></svg>'
+  };
+  const sampleTag = (on, text) => (on ? `<span class="sample-note">${esc(text || 'Conteúdo de exemplo')}</span>` : '');
+
+  function img(i, o) {
+    o = o || {};
+    if (!i || !i.src) return '';
+    const dims = i.width && i.height ? ` width="${i.width}" height="${i.height}"` : '';
+    return `<img src="${esc(i.src)}" alt="${esc(i.alt || '')}"${dims} loading="${o.eager ? 'eager' : 'lazy'}" decoding="async"${o.eager ? ' fetchpriority="high"' : ''}>`;
+  }
+  const estBtn = (label, cls, service) =>
+    `<button type="button" class="btn ${cls || 'btn-primary'}" data-estimate${service ? ` data-service="${esc(service)}"` : ''}>${esc(label)}</button>`;
+
+  /* ---------- theme, fonts, meta ---------- */
+  function applyTheme() {
+    const t = C.theme || {}, r = document.documentElement.style;
+    ['charcoal', 'forest', 'ivory', 'sage', 'white', 'muted', 'border'].forEach((k) => t[k] && r.setProperty('--' + k, t[k]));
+    if (C.fonts) { r.setProperty('--font-head', C.fonts.headingStack); r.setProperty('--font-body', C.fonts.bodyStack); }
+    document.documentElement.lang = C.lang || 'en';
+    if (C.fonts && C.fonts.provider === 'google') {
+      const l = document.createElement('link');
+      l.rel = 'stylesheet';
+      l.href = 'https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..500&display=swap';
+      document.head.appendChild(l);
+    }
+  }
+  function applyMeta() {
+    const s = B.seo || {};
+    document.title = s.title || B.name;
+    const set = (sel, attr, val, create) => {
+      let e = $(sel);
+      if (!e && create) { e = document.createElement(create.tag); Object.keys(create.attrs).forEach((k) => e.setAttribute(k, create.attrs[k])); document.head.appendChild(e); }
+      if (e && val) e.setAttribute(attr, val);
+    };
+    set('meta[name=description]', 'content', s.description);
+    set('meta[property="og:title"]', 'content', s.title || B.name);
+    set('meta[property="og:description"]', 'content', s.description);
+    const base = C.siteUrl ? C.siteUrl.replace(/\/?$/, '/') : '';
+    if (base) {
+      set('link[rel=canonical]', 'href', base, { tag: 'link', attrs: { rel: 'canonical' } });
+      set('meta[property="og:url"]', 'content', base, { tag: 'meta', attrs: { property: 'og:url' } });
+      if (s.ogImage) set('meta[property="og:image"]', 'content', new URL(s.ogImage, base).href, { tag: 'meta', attrs: { property: 'og:image' } });
+    }
+    // LocalBusiness JSON-LD: only for real (non-sample) sites with a URL and accurate contact info.
+    if (!C.isSample && base && B.name && (K.phone || K.address)) {
+      const ld = { '@context': 'https://schema.org', '@type': 'LocalBusiness', name: B.name, url: base };
+      if (K.phone) ld.telephone = K.phone;
+      if (K.email) ld.email = K.email;
+      if (K.address) ld.address = K.address;
+      if (C.area.main) ld.areaServed = [C.area.main].concat(C.area.additional || []);
+      const sc = document.createElement('script');
+      sc.type = 'application/ld+json';
+      sc.textContent = JSON.stringify(ld);
+      document.head.appendChild(sc);
+    }
+  }
+
+  /* ---------- section renderers (each returns '' when it has no real content) ---------- */
+  const hasGallery = () => (C.gallery.items || []).length > 0;
+  const hasFeatured = () => C.featuredProject && C.featuredProject.enabled && C.featuredProject.image && C.featuredProject.title;
+  const hasTestimonials = () => (C.testimonials || []).filter((t) => t && t.quote).length > 0;
+  const hasFaq = () => (C.faq.items || []).length > 0;
+
+  function utility() {
+    const u = C.utilityBar;
+    if (!u || !u.enabled) return '';
+    const left = [];
+    if (u.showArea && C.area.main) left.push(`<span>Atendemos ${esc(C.area.main)}${(C.area.additional || []).length ? ' e região' : ''}</span>`);
+    if (u.showHours && (K.hours || [])[0]) left.push(`<span class="u-hours">${esc(K.hours[0].days)}: ${esc(K.hours[0].time)}</span>`);
+    const right = u.showPhone && K.phone ? `<a href="tel:${esc(digits(K.phone) ? '+' + digits(K.phone) : K.phone)}">${esc(K.phone)}</a>` : '';
+    if (!left.length && !right) return '';
+    return `<div class="utility"><div class="container"><div class="u-list">${left.join('')}</div>${right}</div></div>`;
+  }
+
+  function logo(extra) {
+    const L = B.logo || {};
+    const inner = L.image
+      ? `<img src="${esc(L.image)}" alt="${esc(B.name)}">`
+      : `<span class="logo-mark" aria-hidden="true">${esc(L.mark || (B.name || '?').charAt(0))}</span><span>${esc(L.text || B.name)}</span>`;
+    return `<a class="logo" href="#top" aria-label="${esc(B.name)} — voltar ao topo">${inner}</a>`;
+  }
+
+  function navLinks() {
+    return [
+      ['Serviços', '#services', services.length > 0],
+      ['Nossa Abordagem', '#approach', (C.approach.steps || []).length > 0],
+      ['Projetos', hasGallery() ? '#gallery' : '#featured', hasGallery() || hasFeatured()],
+      ['Áreas Atendidas', '#areas', !!C.area.main],
+      ['FAQ', '#faq', hasFaq()],
+      ['Contato', '#contact', true]
+    ].filter((n) => n[2]);
+  }
+
+  function header() {
+    const links = navLinks().map((n) => `<li><a class="nav-link" href="${n[1]}">${n[0]}</a></li>`).join('');
+    return `<header class="site-header" id="top"><div class="container">${logo()}
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Principal"><ul class="nav-list">${links}<li>${estBtn(C.cta.estimate, 'btn-primary nav-cta')}</li></ul></nav></div></header>`;
+  }
+
+  function hero() {
+    const h = C.hero;
+    const note = C.area.main ? `<p class="hero-note">Atendemos ${esc(C.area.main)}${(C.area.additional || []).length ? ' e região' : ''}.</p>` : '';
+    return `<section class="hero" aria-labelledby="hero-title"><div class="container hero-grid">
+      <div class="hero-copy"><div>
+        <p class="eyebrow">${esc(h.eyebrow)}</p>
+        <h1 id="hero-title">${esc(h.headline)}</h1>
+        <p class="lede">${esc(h.description)}</p>
+        <div class="hero-actions">${estBtn(h.primaryCta)}${services.length ? `<a class="btn btn-ghost" href="#services">${esc(h.secondaryCta)}</a>` : ''}</div></div>${note}</div>
+      <figure class="hero-media">${img(h.image, { eager: true })}<figcaption class="hero-label"><strong>${esc(h.serviceLabel || B.category)}</strong>${C.area.main ? `<span class="muted">${esc(C.area.main)}</span>` : ''}</figcaption></figure>
+    </div></section>`;
+  }
+
+  function servicesSection() {
+    if (!services.length) return '';
+    const S = C.services;
+    const withImg = services.filter((s) => s.image && s.image.src);
+    const feat = (withImg.length >= 1 ? withImg : services).slice(0, services.length < 3 ? services.length : 2);
+    const rest = services.filter((s) => !feat.includes(s));
+    const featHtml = feat.map((s) => `<article class="svc-feature reveal${s.image ? '' : ' no-img'}">${s.image ? `<div class="frame">${img(s.image)}</div>` : ''}
+      <h3 class="h3">${esc(s.name)}</h3><p>${esc(s.description)}</p><button type="button" class="link" data-estimate data-service="${esc(s.id)}">${esc(S.actionLabel)}<span class="sr-only"> para ${esc(s.name)}</span></button></article>`).join('');
+    const rows = rest.map((s) => `<li class="svc-row reveal"><h3 class="h3">${esc(s.name)}</h3><p>${esc(s.description)}</p>
+      <button type="button" class="link" data-estimate data-service="${esc(s.id)}">${esc(S.actionLabel)}<span class="sr-only"> para ${esc(s.name)}</span></button></li>`).join('');
+    return `<section class="section paper" id="services" aria-labelledby="services-title"><div class="container">
+      <div class="split-head"><h2 class="h2" id="services-title">${esc(S.title)}</h2><p class="muted">${esc(S.intro)}</p></div>
+      <div class="svc-features ${feat.length === 2 ? 'two' : ''}">${featHtml}</div>
+      ${rows ? `<ul class="svc-rows">${rows}</ul>` : ''}</div></section>`;
+  }
+
+  function statement() {
+    const s = C.statement; if (!s || !s.headline) return '';
+    return `<section class="section dark statement" aria-labelledby="statement-title"><div class="container"><h2 id="statement-title" class="reveal">${esc(s.headline)}</h2>${s.text ? `<p class="reveal">${esc(s.text)}</p>` : ''}</div></section>`;
+  }
+
+  function approach() {
+    const A = C.approach; const st = A.steps || []; if (!st.length) return '';
+    return `<section class="section" id="approach" aria-labelledby="approach-title"><div class="container">
+      <div class="split-head"><h2 class="h2" id="approach-title">${esc(A.title)}</h2><p class="muted">${esc(A.intro)}</p></div>
+      <ol class="steps" style="--cols:${Math.min(st.length, 4)};list-style:none;padding:0;margin-bottom:0">${st.map((s, i) => `<li class="step reveal"><span class="step-n" aria-hidden="true">${String(i + 1).padStart(2, '0')}</span><h3 class="h3">${esc(s.title)}</h3><p>${esc(s.text)}</p></li>`).join('')}</ol></div></section>`;
+  }
+
+  function midCta() {
+    const m = C.midCta; if (!m || !m.enabled) return '';
+    return `<section class="cta-band" aria-label="Solicitar orçamento"><div class="container"><div><h2>${esc(m.headline)}</h2><p class="muted">${esc(m.text)}</p></div>${estBtn(m.button)}</div></section>`;
+  }
+
+  function featured() {
+    if (!hasFeatured()) return '';
+    const f = C.featuredProject;
+    return `<section class="section forest" id="featured" aria-labelledby="featured-title"><div class="container">
+      <div class="feature-grid"><div class="reveal">${img(f.image)}</div>
+      <div class="feature-meta reveal"><p class="tag">${esc(f.category)}${f.location ? ' — ' + esc(f.location) : ''}</p>
+      <h2 class="h2" id="featured-title">${esc(f.title)}</h2><p>${esc(f.description)}</p>${sampleTag(f.isSample, 'Projeto de demonstração')}
+      ${f.cta ? estBtn(f.cta, 'btn-primary') : ''}</div></div></div></section>`;
+  }
+
+  function gallery() {
+    if (!hasGallery()) return '';
+    const G = C.gallery;
+    const items = G.items.map((g, i) => `<figure class="g-item reveal${G.lightbox ? '' : ' static'}">${G.lightbox
+      ? `<button type="button" data-lb="${i}" aria-label="Ampliar imagem: ${esc(g.alt)}">${img(g)}</button>` : `<div>${img(g)}</div>`}${g.caption ? `<figcaption>${esc(g.caption)}</figcaption>` : ''}</figure>`).join('');
+    return `<section class="section" id="gallery" aria-labelledby="gallery-title"><div class="container">
+      <div class="split-head"><h2 class="h2" id="gallery-title">${esc(G.title)}</h2><div><p class="muted">${esc(G.intro)}</p>${G.itemsAreSample ? `<p style="margin-top:.8rem">${sampleTag(true, G.sampleNotice)}</p>` : ''}</div></div>
+      <div class="gallery">${items}</div></div></section>`;
+  }
+
+  function why() {
+    const W = C.why; if (!(W.items || []).length) return '';
+    const check = icons.check;
+    return `<section class="section paper" id="why" aria-labelledby="why-title"><div class="container why-grid">
+      <h2 class="h2 why-title" id="why-title">${esc(W.title)}</h2>
+      <ul class="why-list">${W.items.map((i) => `<li class="reveal">${check}<h3>${esc(i.title)}</h3><p>${esc(i.text)}</p></li>`).join('')}</ul></div></section>`;
+  }
+
+  function about() {
+    const A = C.about; if (!A.title) return '';
+    const team = (A.team || []).length ? `<ul class="team-list">${A.team.map((t) => `<li>${esc(t.name)}<span>${esc(t.role || '')}</span></li>`).join('')}</ul>` : '';
+    return `<section class="section" id="about" aria-labelledby="about-title"><div class="container about-grid">
+      <div class="reveal">${img(A.image)}${A.imageIsSample ? `<p style="margin-top:.7rem">${sampleTag(true, 'Imagem de exemplo — substitua por uma foto real da equipe')}</p>` : ''}</div>
+      <div class="about-copy reveal"><h2 class="h2" id="about-title">${esc(A.title)}</h2>${(A.paragraphs || []).map((p) => `<p>${esc(p)}</p>`).join('')}
+      ${A.philosophy ? `<p class="philosophy">${esc(A.philosophy)}</p>` : ''}${team}${A.cta ? `<a class="btn btn-ghost" href="#contact">${esc(A.cta)}</a>` : ''}</div></div></section>`;
+  }
+
+  function areas() {
+    if (!C.area.main) return '';
+    const list = (C.area.additional || []);
+    return `<section class="section dark" id="areas" aria-labelledby="areas-title"><div class="container areas-grid">
+      <div class="reveal"><h2 class="h3" id="areas-title" style="max-width:16em;font-size:clamp(1.6rem,3vw,2.4rem)">${esc(C.areas.title)}</h2><p class="main-city" aria-label="Principal área de atendimento">${esc(C.area.main)}</p>
+      ${C.area.note ? `<p class="muted" style="margin-top:1.4rem;max-width:30em">${esc(C.area.note)}</p>` : ''}
+      ${isHttps(K.mapsUrl) ? `<p style="margin-top:1.4rem"><a class="btn btn-ghost" href="${esc(K.mapsUrl)}" target="_blank" rel="noopener noreferrer">${esc(C.areas.mapLabel)}<span class="sr-only"> (abre em nova aba)</span></a></p>` : ''}</div>
+      ${list.length ? `<ul class="area-list reveal" aria-label="Outras áreas de atendimento">${list.map((a) => `<li>${esc(a)}</li>`).join('')}</ul>` : ''}</div></section>`;
+  }
+
+  function testimonials() {
+    const t = (C.testimonials || []).filter((x) => x && x.quote); if (!t.length) return '';
+    return `<section class="section paper" id="testimonials" aria-labelledby="testi-title"><div class="container"><h2 class="h2" id="testi-title">O que dizem os clientes</h2>
+      <div class="quotes" style="--cols:${Math.min(t.length, 2)}">${t.map((x) => `<figure style="margin:0" class="reveal"><blockquote><p>“${esc(x.quote)}”</p></blockquote>
+      <figcaption>${x.name ? esc(x.name) : 'Cliente verificado'}${x.sourceUrl && isHttps(x.sourceUrl) ? ` — <a href="${esc(x.sourceUrl)}" target="_blank" rel="noopener noreferrer">${esc(x.sourceLabel || 'Fonte')}<span class="sr-only"> (abre em nova aba)</span></a>` : ''}</figcaption></figure>`).join('')}</div></div></section>`;
+  }
+
+  function faq() {
+    if (!hasFaq()) return '';
+    const items = C.faq.items.map((f, i) => `<div class="acc-item"><h3><button class="acc-btn" type="button" id="faq-b${i}" aria-expanded="false" aria-controls="faq-p${i}"><span>${esc(f.q)}</span><span class="plus" aria-hidden="true"></span></button></h3>
+      <div class="acc-panel" id="faq-p${i}" role="region" aria-labelledby="faq-b${i}" inert><div><p>${esc(f.a)}</p></div></div></div>`).join('');
+    return `<section class="section" id="faq" aria-labelledby="faq-title"><div class="container faq-grid"><h2 class="h2" id="faq-title">${esc(C.faq.title)}</h2><div>${items}</div></div></section>`;
+  }
+
+  function contact() {
+    const S = C.contact_section, rows = [];
+    const tel = digits(K.phone) ? '+' + digits(K.phone) : '';
+    if (K.phone) rows.push(['Telefone', `<a href="tel:${esc(tel)}">${esc(K.phone)}</a>`]);
+    if (waNumber()) rows.push(['WhatsApp', `<a href="https://wa.me/${waNumber()}" target="_blank" rel="noopener noreferrer">${esc(K.whatsapp)}<span class="sr-only"> (abre o WhatsApp em nova aba)</span></a>`]);
+    if (K.email) rows.push(['E-mail', `<a href="mailto:${esc(K.email)}">${esc(K.email)}</a>`]);
+    if ((K.hours || []).length) rows.push(['Horário', K.hours.map((h) => `${esc(h.days)}: ${esc(h.time)}`).join('<br>') + (K.responseNote ? `<small>${esc(K.responseNote)}</small>` : '')]);
+    rows.push(['Área de atendimento', esc([C.area.main].concat(C.area.additional || []).filter(Boolean).join(', '))]);
+    if (K.address && K.showAddress) rows.push(['Endereço', esc(K.address)]);
+    if (isHttps(K.mapsUrl)) rows.push(['Mapa', `<a href="${esc(K.mapsUrl)}" target="_blank" rel="noopener noreferrer">Abrir no Google Maps<span class="sr-only"> (abre em nova aba)</span></a>`]);
+    return `<section class="section dark" id="contact" aria-labelledby="contact-title" style="border-top:1px solid rgba(183,197,184,.25)"><div class="container contact-grid">
+      <div class="reveal"><h2 class="h2" id="contact-title">${esc(S.title)}</h2><p class="muted" style="margin-top:1rem;max-width:26em">${esc(S.intro)}</p>
+      <div class="contact-actions">${estBtn(C.cta.estimate, 'btn-primary')}</div></div>
+      <dl class="contact-list reveal" style="margin:0">${rows.map((r) => `<div class="contact-row"><dt>${r[0]}</dt><dd>${r[1]}</dd></div>`).join('')}</dl></div></section>`;
+  }
+
+  function footer() {
+    const nav = navLinks().filter((n) => true).map((n) => `<li><a href="${n[1]}">${n[0]}</a></li>`).join('');
+    const svc = services.map((s) => `<li><button type="button" class="link" data-estimate data-service="${esc(s.id)}">${esc(s.name)}</button></li>`).join('');
+    const soc = (C.social || []).filter((s) => s && s.label && isHttps(s.url)).map((s) => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.label)}<span class="sr-only"> (abre em nova aba)</span></a></li>`).join('');
+    const tel = digits(K.phone) ? '+' + digits(K.phone) : '';
+    const priv = isHttps(C.privacy.url) ? `<a href="${esc(C.privacy.url)}" target="_blank" rel="noopener noreferrer">Política de privacidade</a>` : `<button type="button" class="link" data-privacy>Política de privacidade</button>`;
+    const fa = C.footer || {};
+    const attr = fa.showAttribution ? (isHttps(fa.attributionUrl) ? `<a href="${esc(fa.attributionUrl)}" target="_blank" rel="noopener noreferrer">${esc(fa.attributionText)}</a>` : `<span>${esc(fa.attributionText)}</span>`) : '';
+    return `<footer class="site-footer"><div class="container"><div class="footer-grid">
+      <div>${logo()}<p style="margin-top:1rem;max-width:26em">${esc(B.footerDescription)}</p>${estBtn(C.cta.estimate, 'btn-primary').replace('btn btn-primary', 'btn btn-primary dark-btn')}</div>
+      <nav aria-label="Rodapé"><h2>Explorar</h2><ul>${nav}</ul></nav>
+      ${services.length ? `<div><h2>Serviços</h2><ul>${svc}</ul></div>` : ''}
+      <div><h2>Contato</h2><ul>${K.phone ? `<li><a href="tel:${esc(tel)}">${esc(K.phone)}</a></li>` : ''}${K.email ? `<li><a href="mailto:${esc(K.email)}">${esc(K.email)}</a></li>` : ''}${K.address && K.showAddress ? `<li>${esc(K.address)}</li>` : ''}${soc}</ul></div></div>
+      <div class="footer-bottom"><span>© ${new Date().getFullYear()} ${esc(B.name)}</span><ul><li>${priv}</li><li><button type="button" class="link" data-cookie-prefs>Preferências de cookies</button></li>${attr ? `<li>${attr}</li>` : ''}</ul></div></div></footer>`;
+  }
+
+  function floatWa() {
+    const f = C.cta.whatsappFloat;
+    if (!f || !f.enabled || !waNumber()) return '';
+    const label = 'Conversar no WhatsApp';
+    if (f.action === 'form') return `<button type="button" class="wa-float" data-estimate aria-label="${label} — solicitar orçamento">${icons.wa}</button>`;
+    const msg = encodeURIComponent(`Olá, ${B.name}! Gostaria de saber mais sobre os serviços.`);
+    return `<a class="wa-float" href="https://wa.me/${waNumber()}?text=${msg}" target="_blank" rel="noopener noreferrer" aria-label="${label} (abre em nova aba)">${icons.wa}</a>`;
+  }
+
+  /* ---------- dialogs ---------- */
+  function estimateDialog() {
+    const opts = services.map((s) => `<option value="${esc(s.id)}">${esc(s.name)}</option>`).join('');
+    return `<dialog id="estimate-dlg" class="side" aria-labelledby="est-title"><div class="dlg-panel">
+      <div class="dlg-head"><div><h2 id="est-title">${esc(C.cta.estimate)}</h2><p class="muted" style="font-size:.95rem;margin-top:.4rem">Informe alguns dados. Vamos preparar uma mensagem de WhatsApp para você revisar e enviar.</p></div>
+      <button type="button" class="icon-btn" data-close aria-label="Fechar formulário de orçamento">${icons.close}</button></div>
+      <div class="dlg-body"><div id="est-config"></div>
+      <form class="form" id="est-form" novalidate>
+        <div class="field"><label for="f-name">Nome completo <span class="req" aria-hidden="true">*</span></label><input class="input" id="f-name" name="name" autocomplete="name" required aria-describedby="e-name"><div class="err" id="e-name" aria-live="polite"></div></div>
+        <div class="two"><div class="field"><label for="f-phone">Telefone ou WhatsApp <span class="req" aria-hidden="true">*</span></label><input class="input" id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required aria-describedby="e-phone"><div class="err" id="e-phone" aria-live="polite"></div></div>
+        <div class="field"><label for="f-email">E-mail <span class="hint">(opcional)</span></label><input class="input" id="f-email" name="email" type="email" autocomplete="email" aria-describedby="e-email"><div class="err" id="e-email" aria-live="polite"></div></div></div>
+        <div class="two"><div class="field"><label for="f-city">Cidade ou CEP <span class="req" aria-hidden="true">*</span></label><input class="input" id="f-city" name="city" autocomplete="postal-code" required aria-describedby="e-city"><div class="err" id="e-city" aria-live="polite"></div></div>
+        <div class="field"><label for="f-service">Serviço desejado <span class="req" aria-hidden="true">*</span></label><select class="input" id="f-service" name="service" required aria-describedby="e-service"><option value="">Selecione um serviço</option>${opts}<option value="other">Outro / não sei ao certo</option></select><div class="err" id="e-service" aria-live="polite"></div></div></div>
+        <fieldset class="field"><legend>Forma de contato preferida</legend><div class="radios">
+          <label><input type="radio" name="method" value="WhatsApp" checked> WhatsApp</label><label><input type="radio" name="method" value="Ligação"> Ligação</label><label><input type="radio" name="method" value="E-mail"> E-mail</label></div></fieldset>
+        <div class="field"><label for="f-desc">Descrição do serviço <span class="hint">(opcional)</span></label><textarea class="input" id="f-desc" name="desc" rows="4"></textarea></div>
+        <div class="notice">Ao enviar, o WhatsApp abre com uma mensagem pronta. Nada é enviado até você revisar e tocar em enviar no WhatsApp.</div>
+        <div class="form-actions"><button class="btn btn-primary" type="submit">Preparar mensagem no WhatsApp</button><div class="form-status" id="est-status" role="status" aria-live="polite"></div></div>
+      </form></div></div></dialog>`;
+  }
+  
+function privacyDialog() {
+    const P = C.privacy, name = esc(P.controllerName || B.name), mail = P.contactEmail || K.email;
+    const I = C.integrations || {}, ga = I.analytics && I.analytics.ga4MeasurementId, ad = I.advertising || {};
+    const adOn = ad.metaPixelId || ad.googleAdsId;
+    return `<dialog id="privacy-dlg" class="side" aria-labelledby="priv-title"><div class="dlg-panel"><div class="dlg-head"><h2 id="priv-title">Política de privacidade</h2><button type="button" class="icon-btn" data-close aria-label="Fechar política de privacidade">${icons.close}</button></div>
+      <div class="dlg-body policy">
+      ${C.isSample ? '<div class="notice warn">Política modelo. Revise e adapte ao negócio e à legislação aplicável (como a LGPD) antes de publicar.</div>' : ''}
+      <h3>Quem somos</h3><p>${name} é responsável por este site.${mail ? ` Contato: <a href="mailto:${esc(mail)}">${esc(mail)}</a>.` : ''}</p>
+      <h3>Pedidos de orçamento</h3><p>O formulário não envia dados para nossos servidores nem para terceiros. Ao enviá-lo, seu navegador abre o WhatsApp com uma mensagem montada a partir do que você digitou. Você decide se quer enviá-la. Os dados informados não ficam salvos no seu navegador.</p>
+      <h3>Cookies e tecnologias semelhantes</h3><p>O site funciona sem cookies opcionais. Sua escolha de consentimento é guardada no seu navegador (armazenamento local) para lembrarmos dela. Você pode mudar a escolha a qualquer momento em “Preferências de cookies”, no rodapé.</p>
+      <ul><li><strong>Analytics:</strong> ${ga ? 'O Google Analytics 4 só é carregado se você aceitar. Ele mede como o site é usado.' : 'Não configurado neste site; nada é carregado.'}</li>
+      <li><strong>Publicidade e medição de campanhas:</strong> ${adOn ? 'As tags de medição (' + [ad.metaPixelId ? 'Meta Pixel' : '', ad.googleAdsId ? 'Google Ads' : ''].filter(Boolean).join(', ') + ') só são carregadas se você aceitar esta categoria.' : 'Não configurado neste site; nada é carregado.'}</li></ul>
+      <p>Os dados digitados no formulário nunca são enviados a ferramentas de análise ou publicidade.</p>
+      <h3>Fontes</h3><p>${C.fonts && C.fonts.provider === 'google' ? 'Este site carrega fontes do Google Fonts, o que significa que seu navegador acessa servidores do Google ao abrir a página.' : 'Este site usa fontes disponíveis no seu dispositivo.'}</p>
+      <h3>Seus direitos</h3><p>${mail ? `Para dúvidas sobre seus dados, escreva para ${esc(mail)}.` : 'Entre em contato com a empresa pelos dados deste site para tirar dúvidas sobre seus dados.'}</p></div></div></dialog>`;
+  }
+  
+function lightboxDialog() {
+    if (!hasGallery() || !C.gallery.lightbox) return '';
+    return `<dialog id="lb-dlg" class="lightbox" aria-label="Visualizador de imagens"><div class="lb"><img id="lb-img" alt=""><div class="lb-bar"><span id="lb-cap" aria-live="polite"></span>
+      <div class="lb-nav"><button type="button" class="icon-btn" id="lb-prev" aria-label="Imagem anterior">${icons.prev}</button><button type="button" class="icon-btn" id="lb-next" aria-label="Próxima imagem">${icons.next}</button></div></div>
+      <button type="button" class="icon-btn lb-close" data-close aria-label="Fechar visualizador">${icons.close}</button></div></dialog>`;
+  }
+  function consentBanner() {
+    return `<div class="consent" id="consent" role="region" aria-label="Cookie consent" lang="pt-BR" hidden><div class="consent-inner">
+      <p>Você escolhe sobre a medição. Com sua autorização, usamos Analytics e mídia para entender a navegação e melhorar campanhas. Nenhum dado digitado no WhatsApp é enviado pelo site. <button type="button" class="link" data-privacy>Ver privacidade</button>.</p>
+      <div class="consent-actions"><button type="button" class="btn btn-primary" data-consent="all">Aceitar tudo</button><button type="button" class="btn btn-ghost" data-consent="none">Rejeitar opcionais</button><button type="button" class="btn btn-ghost" id="consent-custom" aria-expanded="false" aria-controls="consent-prefs">Personalizar</button></div>
+      <div class="consent-prefs" id="consent-prefs" hidden>
+        <div class="pref"><input type="checkbox" checked disabled id="c-ess"><label for="c-ess">Essenciais<small>Necessários para o funcionamento do site. Sempre ativos.</small></label></div>
+        <div class="pref"><input type="checkbox" id="c-an"><label for="c-an">Analytics<small id="c-an-n"></small></label></div>
+        <div class="pref"><input type="checkbox" id="c-ad"><label for="c-ad">Publicidade e medição de campanhas<small id="c-ad-n"></small></label></div>
+        <div><button type="button" class="btn btn-primary" id="consent-save">Salvar preferências</button></div></div></div></div>`;
+  }
+
+  /* ---------- dialog manager (native <dialog>: focus trap + Escape; we add scroll lock, focus restore, backdrop click) ---------- */
+  const returnFocus = new WeakMap();
+  function openDlg(d, trigger) {
+    if (!d || d.open) return;
+    returnFocus.set(d, trigger || document.activeElement);
+    document.body.classList.add('is-locked');
+    d.showModal();
+  }
+  function wireDialog(d) {
+    if (!d) return;
+    d.addEventListener('close', () => {
+      if (!$$('dialog[open]').length) document.body.classList.remove('is-locked');
+      const t = returnFocus.get(d); if (t && document.contains(t) && t.focus) t.focus();
+    });
+    d.addEventListener('click', (e) => { if (e.target === d) d.close(); });
+    $$('[data-close]', d).forEach((b) => b.addEventListener('click', () => d.close()));
+  }
+
+  /* ---------- estimate form ---------- */
+  const serviceName = (id) => (services.find((s) => s.id === id) || {}).name || (id === 'other' ? 'Outro / não sei ao certo' : '');
+  function setupEstimate() {
+    const dlg = $('#estimate-dlg'), form = $('#est-form'), status = $('#est-status'), cfg = $('#est-config');
+    wireDialog(dlg);
+    const field = (id) => $('#f-' + id);
+    const setErr = (id, msg) => { const f = field(id), e = $('#e-' + id); if (!f || !e) return; e.textContent = msg || ''; if (msg) f.setAttribute('aria-invalid', 'true'); else f.removeAttribute('aria-invalid'); };
+    function validate() {
+      const v = Object.fromEntries(new FormData(form).entries());
+      const err = {};
+      if (!v.name || v.name.trim().length < 2) err.name = 'Informe seu nome completo.';
+      const pd = digits(v.phone);
+      if (!v.phone || !v.phone.trim()) err.phone = 'Informe um telefone ou WhatsApp.';
+      else if (pd.length < 8 || pd.length > 15 || /[^\d\s+().-]/.test(v.phone)) err.phone = 'Informe um número válido com DDD ou código do país (8 a 15 dígitos).';
+      if (v.email && v.email.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.email.trim())) err.email = 'Informe um e-mail válido ou deixe em branco.';
+      if (!v.city || !v.city.trim()) err.city = 'Informe sua cidade ou CEP.';
+      if (!v.service) err.service = 'Escolha o serviço desejado.';
+      ['name', 'phone', 'email', 'city', 'service'].forEach((k) => setErr(k, err[k]));
+      return { v, err };
+    }
+    ['name', 'phone', 'email', 'city', 'service'].forEach((k) => field(k).addEventListener('input', () => { if (field(k).getAttribute('aria-invalid')) setErr(k, ''); }));
+    const wa = waNumber();
+    if (!wa) {
+      cfg.innerHTML = isDev()
+        ? '<div class="notice warn" role="alert"><strong>Configuração necessária (aviso para desenvolvedores):</strong> contact.whatsapp está ausente ou inválido em src/config.js. Não é possível enviar pedidos até definir um número válido.</div>'
+        : `<div class="notice warn" role="alert">Os pedidos de orçamento online estão temporariamente indisponíveis. Entre em contato${K.phone ? ` por telefone: <a href="tel:+${digits(K.phone)}">${esc(K.phone)}</a>` : ''}${K.email ? `${K.phone ? ' ou' : ''} por e-mail: <a href="mailto:${esc(K.email)}">${esc(K.email)}</a>` : ''}.</div>`;
+      console.warn('[Home Services Elite] contact.whatsapp is missing or invalid; estimate form cannot open WhatsApp.');
+    }
+    form.addEventListener('submit', (e) => {
+      e.preventDefault(); status.textContent = '';
+      if (!wa) { status.innerHTML = '<span class="err">O WhatsApp não está configurado, então não foi possível preparar a mensagem.</span>'; return; }
+      const { v, err } = validate();
+      const keys = Object.keys(err);
+      if (keys.length) { status.innerHTML = `<span class="err">Corrija ${keys.length === 1 ? '1 campo' : keys.length + ' campos'} acima.</span>`; field(keys[0]).focus(); return; }
+      const lines = [`Olá, ${B.name}! Gostaria de solicitar um orçamento.`, '',
+        `Nome: ${v.name.trim()}`, `Telefone/WhatsApp: ${v.phone.trim()}`];
+      if (v.email && v.email.trim()) lines.push(`E-mail: ${v.email.trim()}`);
+      lines.push(`Cidade/CEP: ${v.city.trim()}`, `Serviço: ${serviceName(v.service)}`, `Contato preferido: ${v.method}`);
+      if (v.desc && v.desc.trim()) lines.push('', `Detalhes: ${v.desc.trim()}`);
+      const url = `https://wa.me/${wa}?text=${encodeURIComponent(lines.join('\n'))}`;
+      const w = window.open(url, '_blank', 'noopener');
+      status.innerHTML = `Sua mensagem está pronta no WhatsApp. <strong>Ela ainda não foi enviada:</strong> revise e toque em enviar por lá. ${w ? '' : ''}<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">Abrir o WhatsApp novamente<span class="sr-only"> (abre em nova aba)</span></a>`;
+    });
+    window.__openEstimate = (serviceId, trigger) => {
+      if (serviceId && services.some((s) => s.id === serviceId)) field('service').value = serviceId;
+      status.textContent = '';
+      openDlg(dlg, trigger);
+    };
+    window.__buildWhatsAppMessage = null; // (kept private; message is built on submit)
+  }
+
+  /* ---------- lightbox ---------- */
+  function setupLightbox() {
+    const d = $('#lb-dlg'); if (!d) return;
+    wireDialog(d);
+    const items = C.gallery.items; let idx = 0;
+    const show = (i) => { idx = (i + items.length) % items.length; const g = items[idx]; const im = $('#lb-img'); im.src = g.src; im.alt = g.alt || ''; $('#lb-cap').textContent = (g.caption || '') + (items.length > 1 ? `  (${idx + 1}/${items.length})` : ''); };
+    $$('[data-lb]').forEach((b) => b.addEventListener('click', () => { show(+b.dataset.lb); openDlg(d, b); }));
+    $('#lb-prev').addEventListener('click', () => show(idx - 1));
+    $('#lb-next').addEventListener('click', () => show(idx + 1));
+    d.addEventListener('keydown', (e) => { if (e.key === 'ArrowLeft') show(idx - 1); if (e.key === 'ArrowRight') show(idx + 1); });
+    if (items.length < 2) { $('#lb-prev').hidden = true; $('#lb-next').hidden = true; }
+  }
+
+  /* ---------- nav, accordion, reveal ---------- */
+  function setupNav() {
+    const btn = $('.menu-btn'), nav = $('#site-nav'); if (!btn) return;
+    const set = (open) => { btn.setAttribute('aria-expanded', String(open)); nav.classList.toggle('open', open); };
+    btn.addEventListener('click', () => set(btn.getAttribute('aria-expanded') !== 'true'));
+    nav.addEventListener('click', (e) => { if (e.target.closest('a,button')) set(false); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') { set(false); btn.focus(); } });
+    window.matchMedia('(min-width:960px)').addEventListener('change', () => set(false));
+    // Hidden mobile nav must not be focusable
+    const sync = () => { const mobile = !window.matchMedia('(min-width:960px)').matches; nav.inert = mobile && !nav.classList.contains('open'); };
+    new MutationObserver(sync).observe(nav, { attributes: true, attributeFilter: ['class'] });
+    window.matchMedia('(min-width:960px)').addEventListener('change', sync); sync();
+  }
+  function setupAccordion() {
+    $$('.acc-btn').forEach((b) => b.addEventListener('click', () => {
+      const open = b.getAttribute('aria-expanded') === 'true', p = $('#' + b.getAttribute('aria-controls'));
+      b.setAttribute('aria-expanded', String(!open)); p.classList.toggle('open', !open); p.inert = open;
+    }));
+  }
+  function setupReveal() {
+    const els = $$('.reveal');
+    if (reduced() || !('IntersectionObserver' in window)) { els.forEach((e) => e.classList.add('in')); return; }
+    const io = new IntersectionObserver((en) => en.forEach((x) => { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } }), { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+    els.forEach((e) => io.observe(e));
+  }
+
+  /* ---------- consent & optional scripts ---------- */
+  const CKEY = 'hse_consent_v1';
+  let memConsent = null; const loaded = {};
+  const readConsent = () => { try { const r = localStorage.getItem(CKEY); return r ? JSON.parse(r) : memConsent; } catch (e) { return memConsent; } };
+  const writeConsent = (c) => { memConsent = c; try { localStorage.setItem(CKEY, JSON.stringify(c)); } catch (e) { console.warn('[Home Services Elite] Could not store consent; it will apply to this visit only.'); } };
+  const addScript = (src) => { const s = document.createElement('script'); s.async = true; s.src = src; document.head.appendChild(s); };
+  const idOk = (id, re) => re.test(String(id || ''));
+  function loadOptional(c) {
+    const I = C.integrations || {};
+    const ga = I.analytics && I.analytics.ga4MeasurementId, ad = I.advertising || {};
+    window.dataLayer = window.dataLayer || [];
+    const gtag = function () { window.dataLayer.push(arguments); };
+    if (c.analytics && idOk(ga, /^G-[A-Z0-9]+$/) && !loaded.ga) {
+      loaded.ga = 1; addScript('https://www.googletagmanager.com/gtag/js?id=' + ga); gtag('js', new Date()); gtag('config', ga);
+    }
+    if (c.advertising) {
+      if (idOk(ad.googleAdsId, /^AW-[0-9]+$/) && !loaded.ads) { loaded.ads = 1; if (!loaded.ga) { addScript('https://www.googletagmanager.com/gtag/js?id=' + ad.googleAdsId); gtag('js', new Date()); } gtag('config', ad.googleAdsId); }
+      if (idOk(ad.metaPixelId, /^[0-9]{6,20}$/) && !loaded.meta) {
+        loaded.meta = 1;
+        /* eslint-disable */
+        !function (f, b, e, v, n, t, s) { if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); }; if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        /* eslint-enable */
+        window.fbq('init', ad.metaPixelId); window.fbq('track', 'PageView');
+      }
+    }
+  }
+  function setupConsent() {
+    const bar = $('#consent'), I = C.integrations || {};
+    const gaOn = idOk(I.analytics && I.analytics.ga4MeasurementId, /^G-[A-Z0-9]+$/);
+    const adOn = idOk(I.advertising && I.advertising.googleAdsId, /^AW-[0-9]+$/) || idOk(I.advertising && I.advertising.metaPixelId, /^[0-9]{6,20}$/);
+    $('#c-an-n').textContent = gaOn ? 'Mede como o site é usado.' : 'Não configurado neste site; nada é carregado.';
+    $('#c-ad-n').textContent = adOn ? 'Mede campanhas e anúncios.' : 'Não configurado neste site; nada é carregado.';
+    const prefs = $('#consent-prefs'), custom = $('#consent-custom');
+    const setBar = (show) => {
+      bar.hidden = !show;
+      document.documentElement.style.setProperty('--banner-h', show ? bar.offsetHeight + 'px' : '0px');
+    };
+    const apply = (c, reloadNote) => {
+      const prev = readConsent();
+      writeConsent({ analytics: !!c.analytics, advertising: !!c.advertising, ts: Date.now() });
+      loadOptional(readConsent());
+      if (prev && ((prev.analytics && !c.analytics) || (prev.advertising && !c.advertising)) && (loaded.ga || loaded.meta || loaded.ads)) {
+        const ga = I.analytics && I.analytics.ga4MeasurementId; if (ga) window['ga-disable-' + ga] = true;
+      }
+      setBar(false);
+    };
+    const open = () => { const c = readConsent() || {}; $('#c-an').checked = !!c.analytics; $('#c-ad').checked = !!c.advertising; setBar(true); };
+    $$('[data-consent]').forEach((b) => b.addEventListener('click', () => { const all = b.dataset.consent === 'all'; apply({ analytics: all, advertising: all }); }));
+    custom.addEventListener('click', () => { const x = prefs.hidden; prefs.hidden = !x; custom.setAttribute('aria-expanded', String(x)); setBar(true); if (x) $('#c-an').focus(); });
+    $('#consent-save').addEventListener('click', () => apply({ analytics: $('#c-an').checked, advertising: $('#c-ad').checked }));
+    window.addEventListener('resize', () => { if (!bar.hidden) setBar(true); });
+    window.__openConsent = () => { prefs.hidden = false; custom.setAttribute('aria-expanded', 'true'); open(); $('#c-an').focus(); };
+    const existing = readConsent();
+    if (existing) loadOptional(existing); else setBar(true);
+  }
+
+  /* ---------- boot ---------- */
+  function boot() {
+    applyTheme(); applyMeta();
+    $('#app').innerHTML = utility() + header() + `<main id="main" tabindex="-1">${[hero(), servicesSection(), statement(), approach(), midCta(), featured(), gallery(), why(), about(), areas(), testimonials(), faq(), contact()].join('')}</main>` +
+      footer() + floatWa() + estimateDialog() + privacyDialog() + lightboxDialog() + consentBanner();
+    setupNav(); setupAccordion(); setupEstimate(); setupLightbox(); setupConsent(); setupReveal();
+    wireDialog($('#privacy-dlg'));
+    document.addEventListener('click', (e) => {
+      const est = e.target.closest('[data-estimate]');
+      if (est) { e.preventDefault(); window.__openEstimate(est.dataset.service, est); return; }
+      const pv = e.target.closest('[data-privacy]');
+      if (pv) { e.preventDefault(); openDlg($('#privacy-dlg'), pv); return; }
+      if (e.target.closest('[data-cookie-prefs]')) { e.preventDefault(); window.__openConsent(); }
+    });
+    if (isDev() && C.isSample) console.info('[Home Services Elite] Template contains SAMPLE content. See README.md and src/config.js.');
+  }
+  boot();
+})();
+
+</script>
+</body>
+</html>
